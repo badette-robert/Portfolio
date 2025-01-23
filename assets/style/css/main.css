@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
 * {
   margin: 15px;
@@ -46,15 +47,38 @@ body {
 
 .nav-link {
   text-decoration: none;
-  color: #ffffff;
+  color: #ffffff; /* Remplace $font-color par une couleur CSS valide */
+  position: relative; /* Ajoute cette ligne pour que le ::after soit positionné par rapport au lien */
 }
 
 .menu {
   list-style: none;
+  margin: 0 15px; /* Ajoute un espacement horizontal entre les éléments du menu */
 }
 
-.menu:last-child {
-  margin-right: 0;
+/* Ligne sous l'élément */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px; /* Épaisseur de la ligne */
+  width: 0; /* Ligne invisible au départ */
+  background-color: #6100ec; /* Couleur de la ligne */
+  transition: width 0.3s ease, left 0.3s ease; /* Animation */
+}
+
+/* Survol : ligne de gauche à droite */
+.nav-link:hover::after {
+  width: 100%; /* Étend la ligne sur toute la largeur */
+  left: 0; /* Départ à gauche */
+}
+
+/* Quand on quitte l'élément : ligne de droite à gauche */
+.nav-link:not(:hover)::after {
+  width: 0; /* Réduit la ligne */
+  left: auto; /* Fait disparaître la ligne en partant de la droite */
+  right: 0;
 }
 
 #top {
