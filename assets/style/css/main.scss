@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+
+* {
+  margin: 15px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+$primary: #121212;
+$secondary: #6100ec;
+$font: "Questrial", sans-serif;
+$font-color: #ffffff;
+
+body {
+  border: 50px;
+}
+
+#main {
+  background-color: $primary;
+  font-family: $font;
+  color: $font-color;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo {
+  margin: 0;
+  font-size: 2rem;
+  display: flex;
+  text-decoration: none;
+}
+
+.highlight {
+  color: $secondary;
+}
+
+#logo-name {
+  color: $font-color;
+  margin-left: -1.1rem;
+}
+
+#nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: $font-color;
+}
+
+.menu {
+  list-style: none;
+}
+
+.menu:last-child {
+  margin-right: 0;
+}
+
+#top {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 20%;
+  padding: 5rem 2rem 10rem;
+}
+
+@media screen and (max-width: 1024px){
+  #top {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 768px){
+  #top {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+
+#top-article {
+  font-size: 1rem;
+}
+
+#pdp {
+  height: 400px;
+  width: 400px;
+  border-radius: 12rem;
+}
+
+#name {
+  font-size: 3rem;
+  color: $secondary;
+}
+
+.card-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+.card-list {
+  display: flex;
+  gap: 20px;
+}
+
+.card-item {
+  flex: 1 1 calc(33.33% - 20px);
+  max-width: calc(33.33% - 20px);
+  list-style: none;
+}
+
+.card-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background-color: $font-color;
+  padding: 15px;
+  border-radius: 12px;
+  transition: 0.2s ease;
+}
+
+.card-link .card-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-list .card-item .card-link {
+  -webkit-user-select: none;
+  user-select: none;
+  text-decoration: none;
+  border: 2px solid transparent;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+  transition: 0.2s ease;
+}
+
+.card-list .card-item .card-link:hover {
+  border-color: $secondary;
+  transform: scale(1.03);
+}
+
+.card-list .card-link .badge {
+  color: $secondary;
+  padding: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 16px 0 18px;
+  background-color: lightsteelblue;
+  width: fit-content;
+  border-radius: 50px;
+}
+
+.card-list .card-link .badge.editor {
+  color: darkblue;
+  background: lightblue;
+}
+
+.card-list .card-link .badge.marketer {
+  color: $secondary;
+  background: lightcoral;
+}
+
+.card-list .card-link .badge.gamer {
+  color: $secondary;
+  background: lightgreen;
+}
+
+.card-list .card-link .badge.designer {
+  color: $secondary;
+  background: lightsalmon;
+}
+
+.card-list .card-link .card-title {
+  font-size: 1rem;
+  color: $primary;
+  text-align: left;
+}
+
+.card-list .card-link .card-button {
+  height: 35px;
+  width: 35px;
+  color: $secondary;
+  border-radius: 50%;
+  margin: 30px 0 5px;
+  background: none;
+  cursor: pointer;
+  border: 2px solid $secondary;
+  transition: 0.4s ease;
+}
+
+.card-list .card-link:hover .card-button {
+  color: $font-color;
+  background: $secondary;
+}
+
+.swiper-pagination{
+  padding: 3px;
+  border-radius: 50px;
+  background-color: $font-color;
+  opacity: 80%;
+}
+
+#contacts{
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  padding-top: 200px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#reseaux{
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 15px;
+  flex-direction: row;
+  width: fit-content;
+  background-color: $font-color;
+}
+
+.logo-reseaux{
+  height: 35px;
+  width: 35px;
+}
+
+.mail-button{
+  text-decoration: none;
+  background-color: $font-color;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.mail-button:hover{
+  background-color: #6100ec;
+  transition: 0.4s ease;
+  color: $font-color;
+}
+
+#download{
+  padding: 10px; 
+  background-color: 
+  #007BFF; color: 
+  white; 
+  border: none; 
+  border-radius: 5px;
+}
+
+#download:hover{
+  background-color: #6aaff9;
+  transition: 0.4s ease;
+}
